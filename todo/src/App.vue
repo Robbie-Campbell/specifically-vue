@@ -38,7 +38,7 @@ export default {
     this.tasks = [
       {
         id: 1,
-        text: 'Doctors appointment',
+        text: 'Doctor appointment',
         day: 'October 9th 2:30',
         reminder: true
       },
