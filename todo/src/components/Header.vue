@@ -1,7 +1,9 @@
 <template>
     <div class="d-flex justify-content-between mt-3">
         <h1>{{title}}</h1>
-        <Button text="Add Task" type="btn-primary"/>
+        <Button @toggle-add-task="$emit('toggle-add-task')" 
+        :text="showAddTask ? 'Close' : 'Add Task'" 
+        :type="showAddTask ? 'btn-danger' : 'btn-primary'"/>
     </div>
 </template>
 
@@ -9,7 +11,8 @@
 import Button from './Button.vue';
 export default {
     props: {
-        title: String
+        title: String,
+        showAddTask: Boolean
     },
     components: {
         Button,
